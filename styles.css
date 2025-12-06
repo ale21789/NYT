@@ -1,0 +1,279 @@
+/* NYT Style Variables */
+:root {
+    --nyt-black: #121212;
+    --nyt-gray: #e2e2e2;
+    --nyt-light-gray: #f7f7f7;
+    --nyt-dark-gray: #666;
+    --nyt-bg: #ffffff;
+    --font-serif-head: 'Playfair Display', serif;
+    --font-serif-body: 'Georgia', 'Times New Roman', serif;
+    --font-sans: 'Arial', sans-serif;
+    --font-masthead: 'UnifrakturMaguntia', cursive;
+    --spacing-unit: 16px;
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--nyt-bg);
+    color: var(--nyt-black);
+    font-family: var(--font-serif-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif-head);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.masthead {
+    font-family: var(--font-masthead);
+    font-size: 4rem;
+    /* Fallback */
+    font-size: clamp(3rem, 8vw, 6rem);
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1;
+}
+
+.sub-headline {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.section-title {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--nyt-black);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: var(--font-sans);
+    font-weight: 700;
+}
+
+.caption {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--nyt-dark-gray);
+    margin-top: 8px;
+    display: block;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Header */
+header {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--nyt-gray);
+    margin-bottom: 40px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--nyt-gray);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 10px 0;
+    border-bottom: 1px double var(--nyt-black);
+    /* Double border for style */
+}
+
+/* Visual Placeholders */
+.visual-box {
+    background-color: var(--nyt-light-gray);
+    border: 1px solid var(--nyt-gray);
+    padding: 20px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.visual-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Section Specifics */
+/* Section 1: Opening Questions */
+.question-card {
+    border-top: 2px solid var(--nyt-black);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.question-text {
+    font-family: var(--font-serif-head);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.main-question-box {
+    background-color: #f0f0f0;
+    padding: 40px;
+    margin-top: 40px;
+    text-align: center;
+    border: 1px solid var(--nyt-gray);
+}
+
+/* Section 2: Dataset */
+.editorial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.editorial-text p {
+    margin-bottom: 20px;
+}
+
+/* Section 5: Tier System */
+.tier-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tier-table th,
+.tier-table td {
+    border-bottom: 1px solid var(--nyt-gray);
+    padding: 10px;
+    text-align: left;
+    font-family: var(--font-sans);
+}
+
+/* Section 6: Network Graph */
+.network-hero {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.network-hero h2 {
+    color: #fff;
+    border-bottom-color: #444;
+}
+
+.network-hero .visual-box {
+    background-color: #333;
+    border-color: #444;
+    color: #fff;
+}
+
+/* Section 9: Closing */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background-color: var(--nyt-gray);
+    /* Creates borders */
+    border: 1px solid var(--nyt-gray);
+}
+
+.summary-tile {
+    background-color: #fff;
+    padding: 30px;
+}
+
+/* Part Divider */
+.part-divider {
+    background-color: var(--nyt-black);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.part-divider h2 {
+    font-family: var(--font-sans);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.part-divider p {
+    font-family: var(--font-serif-head);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--nyt-black);
+    /* Thin separator */
+    margin-top: 60px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--nyt-dark-gray);
+}
