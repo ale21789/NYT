@@ -1,0 +1,6 @@
+raw csv/
+merged_twitter_trolls.csv
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+russian_trolls.parquet
