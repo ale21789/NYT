@@ -12,6 +12,52 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700;900&family=UnifrakturMaguntia&family=Franklin+Gothic+Medium&display=swap"
         rel="stylesheet">
+    <style>
+        .conclusion-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: 'Franklin Gothic Medium', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .conclusion-table th,
+        .conclusion-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .conclusion-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .conclusion-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .conclusion-table .category-col {
+            width: 15%;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .conclusion-table .right-troll-col {
+            width: 42.5%;
+            color: #d32f2f;
+            /* Redish for Right */
+        }
+
+        .conclusion-table .left-troll-col {
+            width: 42.5%;
+            color: #1976d2;
+            /* Blueish for Left */
+        }
+    </style>
 </head>
 
 <body>
@@ -56,135 +102,247 @@
             <p>An overview of the entire operation, spanning millions of tweets and thousands of accounts.</p>
         </div>
 
-        <!-- SECTION 1: Dataset Overview -->
-        <section id="section-1" style="margin-bottom: 60px;">
-            <h3 class="section-title">Dataset Overview</h3>
-            <div class="grid-2">
-                <div class="editorial-text">
-                    <p>To understand the scale of the operation, we analyzed a massive dataset of tweets attributed to
-                        the Internet Research Agency (IRA). This data reveals not just the volume of content, but the
-                        meticulous categorization of accounts designed to infiltrate specific American communities.</p>
-                </div>
-                <div class="visual-box">
-                    <div class="visual-title">Visual 2 — Dataset Columns</div>
-                    <iframe src="graphs/graph_cell_9_0.html" width="100%" height="400px" frameborder="0"></iframe>
-                    <span class="caption">Key metadata fields used to identify coordinated behavior.</span>
-                </div>
+        <!-- CELL 5: Tweet Volume -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">The Pulse of the Operation</h3>
+            <div class="editorial-text">
+                <p>The IRA's activity was not constant. It pulsed with the rhythm of the American political calendar.
+                    From the early experimental days in 2012 to the fever pitch of the 2016 election, the volume of
+                    tweets tells a story of an operation scaling up to meet its moment.</p>
             </div>
-            <div class="visual-box" style="margin-top: 40px;">
-                <div class="visual-title">Visual 3 — Distribution of Account Categories</div>
-                <img src="images/plot_cell_6_1.png" alt="Distribution of Account Categories"
-                    style="width: 100%; height: auto;">
-                <span class="caption">Breakdown of account personas: Right Troll, Left Troll, News Feed, Hashtag Gamer,
-                    and others.</span>
-            </div>
-        </section>
-
-        <!-- SECTION 2: Temporal Patterns -->
-        <section id="section-2" style="margin-bottom: 60px;">
-            <h3 class="section-title">Temporal Patterns</h3>
-            <div class="visual-box" style="margin-bottom: 40px;">
-                <div class="visual-title">Visual 5 — Full Timeline (2012–2018)</div>
-                <img src="images/plot_cell_5_0.png" alt="Full Timeline" style="width: 100%; height: auto;">
-                <span class="caption">The four operational phases of the coordinated campaign.</span>
-            </div>
-            <div class="grid-2">
-                <div class="visual-box">
-                    <div class="visual-title">Visual 6 — Author Activity Heatmaps</div>
-                    <img src="images/plot_cell_8_5.png" alt="Author Activity Heatmaps"
-                        style="width: 100%; height: auto;">
-                </div>
-                <div class="visual-box">
-                    <div class="visual-title">Visual 7 — Hourly / Daily Behavioral Rhythm</div>
-                    <img src="images/plot_cell_8_5.png" alt="Hourly / Daily Behavioral Rhythm"
-                        style="width: 100%; height: auto;">
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: Global Text Analysis -->
-        <section id="section-3" style="margin-bottom: 60px;">
-            <h3 class="section-title">Global Text Analysis</h3>
             <div class="visual-box">
-                <div class="visual-title">Visual 9 — Hashtags: Right vs Left</div>
-                <img src="images/plot_cell_7_4.png" alt="Hashtags: Right vs Left" style="width: 100%; height: auto;">
-                <span class="caption">Divergent hashtag strategies targeting opposing political spectrums.</span>
+                <div class="visual-title">Tweet Volume Over Time (2012-2018)</div>
+                <img src="images/plot_cell_5_0.png" alt="Tweet Volume Over Time" style="width: 100%; height: auto;">
+                <span class="caption">A timeline of escalation: Note the dramatic surge leading up to the 2016 US
+                    Presidential Election.</span>
             </div>
         </section>
 
-        <!-- SECTION 4: Actors & Influence -->
-        <section id="section-4" style="margin-bottom: 60px;">
-            <h3 class="section-title">The Architecture of Influence</h3>
-            <div class="editorial-text" style="margin-bottom: 30px;">
-                <p>Not all trolls are created equal. The operation relied on a tiered system of accounts, each playing a
-                    distinct role in the dissemination of propaganda.</p>
+        <!-- CELL 6: Account Categories -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">A Cast of Thousands</h3>
+            <div class="editorial-text">
+                <p>To infiltrate diverse communities, the IRA created distinct personas. They weren't just "trolls";
+                    they were "News Feeds" for the uninformed, "Right Trolls" for conservatives, "Left Trolls" for
+                    liberals, and "Hashtag Gamers" for the bored. This segmentation allowed them to tailor their poison
+                    to every palate.</p>
             </div>
             <div class="grid-3">
                 <div class="visual-box">
-                    <div class="visual-title">Visual 12 — Workhorses</div>
+                    <div class="visual-title">Account Category Distribution</div>
+                    <img src="images/plot_cell_6_1.png" alt="Account Categories" style="width: 100%; height: auto;">
+                </div>
+                <div class="visual-box">
+                    <div class="visual-title">Category Breakdown</div>
+                    <img src="images/plot_cell_6_2.png" alt="Category Breakdown" style="width: 100%; height: auto;">
+                </div>
+                <div class="visual-box">
+                    <div class="visual-title">Persona Analysis</div>
+                    <img src="images/plot_cell_6_3.png" alt="Persona Analysis" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </section>
+
+        <!-- CELL 7: Top Hashtags -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">Hijacking the Conversation</h3>
+            <div class="visual-box">
+                <div class="visual-title">Top Hashtags</div>
+                <img src="images/plot_cell_7_4.png" alt="Top Hashtags" style="width: 100%; height: auto;">
+                <span class="caption">The most weaponized tags: #news, #sports, and #politics dominate the
+                    landscape.</span>
+            </div>
+        </section>
+
+        <!-- CELL 8: Activity Heatmap -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">The 9-to-5 of Disruption</h3>
+            <div class="editorial-text">
+                <p>Despite their digital nature, these trolls worked a shift. Analyzing the timestamps of millions of
+                    tweets reveals a distinct "office hours" pattern, consistent with a professionalized workforce
+                    operating out of St. Petersburg.</p>
+            </div>
+            <div class="visual-box">
+                <div class="visual-title">Activity by Day and Hour</div>
+                <img src="images/plot_cell_8_5.png" alt="Activity Heatmap" style="width: 100%; height: auto;">
+                <span class="caption">The heatmap of a troll farm: Activity peaks during Russian working hours.</span>
+            </div>
+        </section>
+
+        <!-- CELL 9: Dataset Columns -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">The Raw Material</h3>
+            <div class="grid-2">
+                <div class="editorial-text">
+                    <p>The metadata reveals the meticulous tracking of engagement, location, and device usage.</p>
+                </div>
+                <div class="visual-box">
+                    <div class="visual-title">Dataset Columns</div>
+                    <iframe src="graphs/graph_cell_9_0.html" width="100%" height="400px" frameborder="0"></iframe>
+                    <span class="caption">The anatomy of a troll tweet: Metadata fields available for analysis.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CELLS 10-12: Hierarchy -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">The Hierarchy of Influence</h3>
+            <div class="editorial-text">
+                <p>The operation relied on a tiered system. "Workhorses" churned out volume, "Broadcasters" amassed
+                    followers to spread the message, and "Amplifiers" (often unwitting real users or high-profile
+                    targets) gave the content legitimacy through retweets.</p>
+            </div>
+            <div class="grid-3">
+                <div class="visual-box">
+                    <div class="visual-title">The Workhorses (Volume)</div>
                     <img src="images/plot_cell_10_6.png" alt="Workhorses" style="width: 100%; height: auto;">
                 </div>
                 <div class="visual-box">
-                    <div class="visual-title">Visual 13 — Broadcasters</div>
+                    <div class="visual-title">The Broadcasters (Followers)</div>
                     <img src="images/plot_cell_11_7.png" alt="Broadcasters" style="width: 100%; height: auto;">
                 </div>
                 <div class="visual-box">
-                    <div class="visual-title">Visual 14 — Amplifiers</div>
+                    <div class="visual-title">The Amplifiers (Retweeted)</div>
                     <img src="images/plot_cell_12_8.png" alt="Amplifiers" style="width: 100%; height: auto;">
                 </div>
+            </div>
+        </section>
+
+        <!-- CELLS 13-14: Shifting Tactics -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">Shifting Tactics</h3>
+            <div class="editorial-text">
+                <p>As the political climate shifted, so did the IRA's strategy. We observe a clear evolution in the
+                    types of accounts deployed, moving from general "News Feeds" to more aggressive "Left" and "Right"
+                    partisan trolls as the 2016 election approached.</p>
+            </div>
+            <div class="visual-box">
+                <div class="visual-title">Account Type Distribution Over Time</div>
+                <img src="images/plot_cell_13_9.png" alt="Account Type Distribution" style="width: 100%; height: auto;">
+            </div>
+            <div class="visual-box" style="margin-top: 40px;">
+                <div class="visual-title">Normalized Distribution (Strategy Shift)</div>
+                <img src="images/plot_cell_14_10.png" alt="Normalized Distribution" style="width: 100%; height: auto;">
+                <span class="caption">The strategic pivot: Note the rising dominance of partisan troll accounts in later
+                    years.</span>
             </div>
         </section>
 
         <!-- PART II: THE IDEOLOGICAL DIVIDE -->
         <div class="part-divider">
             <h2>PART II: THE IDEOLOGICAL DIVIDE (ENGLISH SUBSET)</h2>
-            <p>A deep dive into the English-language tweets, focusing on the polarization between Left and Right Troll
-                accounts.</p>
+            <p>A deep dive into the polarization machine: How Left and Right Trolls tore the fabric of discourse.</p>
         </div>
 
-        <!-- SECTION 5: Subset Temporal Patterns -->
-        <section id="section-5" style="margin-bottom: 60px;">
-            <h3 class="section-title">Subset Temporal Patterns</h3>
-            <div class="visual-box" style="margin-bottom: 40px;">
-                <div class="visual-title">Visual 20 — Annotated Event Timeline</div>
-                <iframe src="graphs/graph_cell_16_1.html" width="100%" height="500px" frameborder="0"></iframe>
-            </div>
-            <div class="visual-box">
-                <div class="visual-title">Detailed Subset Timeline</div>
-                <iframe src="graphs/graph_cell_17_2.html" width="100%" height="500px" frameborder="0"></iframe>
+        <!-- 1. Hashtags -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">Echo Chambers</h3>
+            <div class="grid-2">
+                <div class="editorial-text">
+                    <p>The hashtag analysis reveals two distinct realities. Right Trolls focused on patriotism, guns,
+                        and Trump (#MAGA, #2A), while Left Trolls co-opted social justice movements (#BlackLivesMatter,
+                        #Resist). The goal was not to debate, but to amplify the extremes.</p>
+                </div>
+                <div class="visual-box">
+                    <div class="visual-title">Hashtags: Left vs Right</div>
+                    <img src="images/plot_cell_20_12.png" alt="Hashtags Left vs Right"
+                        style="width: 100%; height: auto;">
+                </div>
             </div>
         </section>
 
-        <!-- SECTION 6: Narrative & Ideology -->
-        <section id="section-6" style="margin-bottom: 60px;">
-            <h3 class="section-title">Narrative & Ideology</h3>
-            <div class="grid-2">
-                <div class="visual-box">
-                    <div class="visual-title">Visual 10 — Keyword Frequencies</div>
-                    <img src="images/plot_cell_18_11.png" alt="Keyword Frequencies" style="width: 100%; height: auto;">
-                </div>
-                <div class="visual-box">
-                    <div class="visual-title">Hashtag Narratives</div>
-                    <img src="images/plot_cell_20_12.png" alt="Hashtag Narratives" style="width: 100%; height: auto;">
-                </div>
-            </div>
-            <div class="visual-box" style="margin-top: 40px;">
+        <!-- 2. Word Distribution -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">Weaponized Vocabulary</h3>
+            <div class="visual-box">
                 <div class="visual-title">Top Words by Ideology</div>
                 <img src="images/plot_cell_21_13.png" alt="Top Words by Ideology" style="width: 100%; height: auto;">
+                <span class="caption">A linguistic fingerprint of polarization.</span>
             </div>
-            <div class="visual-box" style="margin-top: 40px;">
-                <div class="visual-title">Comparative Trend Analysis</div>
-                <img src="images/plot_cell_22_14.png" alt="Comparative Trend" style="width: 100%; height: auto;">
+        </section>
+
+        <!-- 3. Monthly Tweet Count -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">Monthly Tweet Volume</h3>
+            <div class="visual-box">
+                <div class="visual-title">Monthly Tweet Volume: Left vs Right</div>
+                <iframe src="graphs/graph_cell_16_1.html" width="100%" height="600px" frameborder="0"></iframe>
             </div>
+        </section>
+
+        <!-- 4. Daily Tweet Count -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">Daily Tweet Volume</h3>
+            <div class="visual-box">
+                <div class="visual-title">Daily Tweet Volume: Left vs Right</div>
+                <iframe src="graphs/graph_cell_17_2.html" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- 5. Word Frequency Peaks -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">The Language of Division</h3>
+            <div class="editorial-text">
+                <p>By isolating the English-language tweets from "Left" and "Right" trolls during peak activity, we can
+                    see the mirror-image narratives constructed to enrage both sides of the political spectrum.</p>
+            </div>
+            <div class="visual-box">
+                <div class="visual-title">Word Frequency During Peaks</div>
+                <img src="images/plot_cell_18_11.png" alt="Word Frequency Peaks" style="width: 100%; height: auto;">
+            </div>
+        </section>
+
+        <!-- 6. Conclusion Table -->
+        <section style="margin-bottom: 60px;">
+            <h3 class="section-title">Conclusion: The Anatomy of a Spike</h3>
+            <table class="conclusion-table">
+                <thead>
+                    <tr>
+                        <th class="category-col">Category</th>
+                        <th class="right-troll-col">Right Troll Peak</th>
+                        <th class="left-troll-col">Left Troll Peak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Timing</td>
+                        <td>Post-Election (August 11–18, 2017)</td>
+                        <td>Pre-Election (October 6, 2016)</td>
+                    </tr>
+                    <tr>
+                        <td>Most Used Words</td>
+                        <td>"Trump," "Charlottesville," "Antifa," "maga," "violence," "white"</td>
+                        <td>"black," "trump," "music," "white," "listen," "police," "album"</td>
+                    </tr>
+                    <tr>
+                        <td>Primary Goal</td>
+                        <td>Destabilization and Polarization (Incite Hate)</td>
+                        <td>Distraction and Demobilization (Obscure Russian Meddling)</td>
+                    </tr>
+                    <tr>
+                        <td>Strategic Rationale</td>
+                        <td>The strategy shifted from aiding one candidate to wounding the entire country. The trolls
+                            exploited the real-world crisis in Charlottesville to amplify racial and political conflict
+                            ("Charlottesville," "Antifa," "violence") and reinforce tribal political identity ("maga,"
+                            "Trump"). The massive spike in activity was intended to drive the maximum possible division
+                            post-election.</td>
+                        <td>The peak coincided with the US government's official statements regarding Russian
+                            involvement in the election hacks and the WikiLeaks release of stolen DNC/Podesta emails.
+                            The trolls' messaging had two aims: 1. Flood the environment with apolitical content
+                            ("music," "listen," "album") to distract left-leaning voters and drown out coverage of the
+                            hacking's origins. 2. Inflame social tensions ("black," "police") to discourage voter
+                            participation by fostering distrust and disaffection with the political process.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <!-- SECTION 7: Network Analysis -->
         <section id="section-7" class="network-hero">
             <h2 style="font-size: 3rem; margin-bottom: 30px; border-bottom: 1px solid #444; padding-bottom: 10px;">
-                Inside the
-                Machinery: Network Structure of the Troll Farm</h2>
+                Inside the Machinery: Network Structure of the Troll Farm</h2>
 
-            <!-- Row 1: HTML Graphs -->
+            <!-- HTML Graphs -->
             <div class="visual-box" style="margin-bottom: 40px;">
                 <div class="visual-title">Bridge Categories Network</div>
                 <iframe src="graphs/bridge_categories_network.html" width="100%" height="400px"
