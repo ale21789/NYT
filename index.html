@@ -178,44 +178,49 @@
             </div>
         </section>
 
-        <!-- SECTION 6: Network Analysis (Full Width Dark) -->
-        <section id="section-6" class="network-hero">
-            <div class="container">
-                <h2
-                    style="font-size: 2.5rem; margin-bottom: 40px; border-bottom: 1px solid #444; padding-bottom: 20px;">
-                    Inside the Machinery: Network Structure of the Troll Farm</h2>
+        <!-- SECTION 7: Network Analysis -->
+        <section id="section-7" class="network-hero">
+            <h2 style="font-size: 3rem; margin-bottom: 30px; border-bottom: 1px solid #444; padding-bottom: 10px;">
+                Inside the
+                Machinery: Network Structure of the Troll Farm</h2>
 
-                <div class="visual-box" style="height: 500px; margin-bottom: 40px;">
-                    <div class="visual-title">Visual 18 — Main Network Graph (Gephi)</div>
-                    <p>(Network Graph Visualization Placeholder)</p>
-                    <span class="caption" style="color: #ccc;">A visualization of the retweet and mention network among
-                        IRA accounts.</span>
+            <!-- Row 1: HTML Graphs -->
+            <div class="visual-box" style="margin-bottom: 40px;">
+                <div class="visual-title">Bridge Categories Network</div>
+                <iframe src="graphs/bridge_categories_network.html" width="100%" height="400px"
+                    frameborder="0"></iframe>
+            </div>
+            <div class="visual-box" style="margin-bottom: 40px;">
+                <div class="visual-title">Community Network LCC</div>
+                <iframe src="graphs/community_network_lcc.html" width="100%" height="400px" frameborder="0"></iframe>
+            </div>
+            <div class="visual-box" style="margin-bottom: 40px;">
+                <div class="visual-title">Retweet Network LCC</div>
+                <iframe src="graphs/retweet_network_lcc.html" width="100%" height="400px" frameborder="0"></iframe>
+            </div>
+
+            <!-- Row 2: Images -->
+            <div class="grid-3" style="margin-top: 40px;">
+                <div class="visual-box">
+                    <div class="visual-title">Network Visualization 1</div>
+                    <img src="images/network_image_1.jpeg" alt="Network Visualization 1"
+                        style="width: 100%; height: auto;">
                 </div>
-
-                <div class="grid-2">
-                    <div class="visual-box">
-                        <div class="visual-title">Visual 19 — Community Structure (Louvain)</div>
-                        <p>(Graph Placeholder)</p>
-                    </div>
-                    <div class="visual-box">
-                        <div class="visual-title">Visual 15 — Graph Construction Diagram</div>
-                        <p>(Diagram Placeholder)</p>
-                    </div>
+                <div class="visual-box">
+                    <div class="visual-title">Network Visualization 2</div>
+                    <img src="images/network_image_2.jpeg" alt="Network Visualization 2"
+                        style="width: 100%; height: auto;">
+                </div>
+                <div class="visual-box">
+                    <div class="visual-title">Network Visualization 3</div>
+                    <img src="images/network_image_3.jpeg" alt="Network Visualization 3"
+                        style="width: 100%; height: auto;">
                 </div>
             </div>
         </section>
 
-        <div class="container">
-
-            <!-- SECTION 8: Retweet & Network Analysis -->
-            <section id="section-7" style="margin-bottom: 60px;">
-                <h3 class="section-title">Retweet & Network Analysis</h3>
-                <div class="visual-box" style="margin-bottom: 40px;">
-                    <div class="visual-title">Visual 21 — Event Spike Table</div>
-                    <iframe src="graphs/graph_cell_23_3.html" width="100%" height="500px" frameborder="0"></iframe>
-                </div>
-
-                <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
