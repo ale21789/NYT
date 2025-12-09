@@ -412,71 +412,138 @@
 
                 <!-- Row 1: Images (Moved Up) -->
                 <div class="grid-3" style="margin-bottom: 40px;">
+
+                    <!-- VISUALIZATION 1 -->
                     <div class="visual-box">
                         <div class="visual-title">Network Visualization 1</div>
                         <img src="images/network_image_1.jpeg" alt="Network Visualization 1"
                             style="width: 100%; height: auto;">
+
+                        <!-- Description -->
+                        <p style="font-size: 0.95rem; margin-top: 10px;">
+                            <strong></strong> Outdegree shows who spreads content. Edges colored by source
+                            highlight key distributors.<br>
+                            <strong>Takeaway:</strong> A few hubs retweet heavily, acting as dedicated amplifiers. Their
+                            category-specific clustering shows siloed, coordinated dissemination.
+                        </p>
                     </div>
+
+                    <!-- VISUALIZATION 2 -->
                     <div class="visual-box">
                         <div class="visual-title">Network Visualization 2</div>
                         <img src="images/network_image_2.jpeg" alt="Network Visualization 2"
                             style="width: 100%; height: auto;">
+
+                        <!-- Description -->
+                        <p style="font-size: 0.95rem; margin-top: 10px;">
+                            <strong></strong> Indegree shows who receives retweets. Edges colored by target reveal
+                            main content sources.<br>
+                            <strong>Takeaway:</strong> Only a small set of accounts draws most retweets, functioning as
+                            influencers. Some Real Users also appear here, showing accidental amplification of troll
+                            content.
+                        </p>
                     </div>
+
+                    <!-- VISUALIZATION 3 -->
                     <div class="visual-box">
                         <div class="visual-title">Network Visualization 3</div>
                         <img src="images/network_image_3.jpeg" alt="Network Visualization 3"
                             style="width: 100%; height: auto;">
+
+                        <!-- Description -->
+                        <p style="font-size: 0.95rem; margin-top: 10px;">
+                            <strong></strong> Nodes grouped by modularity (Louvain); size reflects importance
+                            (degree).<br>
+                            <strong>Takeaway:</strong> Clear “communication islands” emerge, each with central leaders.
+                            Minimal overlap between communities indicates intentionally segmented messaging.
+                        </p>
                     </div>
+
                 </div>
+
 
                 <!-- Row 2: HTML Graphs -->
                 <div class="visual-box" style="margin-bottom: 40px;">
                     <div class="visual-title">Retweet Network LCC</div>
+
+                    <!-- Description -->
+                    <p style="font-size: 0.95rem; margin: 10px 0;">
+                        <strong></strong> This visualization highlights retweet flows within the largest connected
+                        component.<br>
+                        <strong>Takeaway:</strong> Retweets concentrate within ideological blocks, with few links
+                        between them. Real Users act as occasional amplifiers, reinforcing echo chambers rather than
+                        cross-group dialogue.
+                    </p>
+
                     <iframe src="graphs/retweet_network_lcc.html" width="100%" height="400px" frameborder="0"></iframe>
                 </div>
+
                 <div class="visual-box" style="margin-bottom: 40px;">
                     <div class="visual-title">Community Network LCC</div>
+
+                    <!-- Description -->
+                    <p style="font-size: 0.95rem; margin: 10px 0;">
+                        <strong></strong> Community detection groups accounts into structural clusters based on
+                        retweet behavior.<br>
+                        <strong>Takeaway:</strong> The network is highly modular, forming clear communication islands.
+                        These clusters align with ideological or functional roles, showing targeted messaging and
+                        limited interaction across groups.
+                    </p>
+
                     <iframe src="graphs/community_network_lcc.html" width="100%" height="400px"
                         frameborder="0"></iframe>
                 </div>
+
                 <div class="visual-box" style="margin-bottom: 40px;">
                     <div class="visual-title">Bridge Categories Network</div>
+
+                    <!-- Description -->
+                    <p style="font-size: 0.95rem; margin: 10px 0;">
+                        <strong></strong> A simplified bridge network shows retweet connections between major
+                        account categories.<br>
+                        <strong>Takeaway:</strong> Cross-category interaction is minimal. Left and Right Trolls operate
+                        in parallel, while Real Users form the only meaningful bridge—occasionally amplifying troll
+                        content.
+                    </p>
+
                     <iframe src="graphs/bridge_categories_network.html" width="100%" height="400px"
                         frameborder="0"></iframe>
                 </div>
-            </section>
 
-            <!-- USER REQUESTED SECTION: Still Active Profiles -->
-            <section style="margin-bottom: 60px;">
-                <h3 class="section-title">Still Active Profiles of Real_Users on X</h3>
 
-                <!-- Intro text -->
-                <p style="margin-bottom: 20px; font-size: 1.05rem; line-height: 1.5;">
-                    To understand the lingering impact of IRA activity, we examined profiles of Real Users who
-                    interacted with troll accounts and remain active on the platform today. These examples illustrate
-                    how authentic users became part of the amplification network.
-                </p>
+                <!-- USER REQUESTED SECTION: Still Active Profiles -->
+                <section style="margin-bottom: 60px;">
+                    <h3 class="section-title">Still Active Profiles of Real_Users on X</h3>
 
-                <div class="grid-2" style="margin-bottom: 20px;">
-                    <div class="visual-box">
-                        <img src="images/real_user_profile_1.jpg" alt="Real User Profile 1"
-                            style="width: 100%; height: auto;">
+                    <!-- Intro text -->
+                    <p style="margin-bottom: 20px; font-size: 1.05rem; line-height: 1.5;">
+                        To understand the lingering impact of IRA activity, we examined profiles of Real Users who
+                        interacted with troll accounts and remain active on the platform today. These examples
+                        illustrate
+                        how authentic users became part of the amplification network.
+                    </p>
+
+                    <div class="grid-2" style="margin-bottom: 20px;">
+                        <div class="visual-box">
+                            <img src="images/real_user_profile_1.jpg" alt="Real User Profile 1"
+                                style="width: 100%; height: auto;">
+                        </div>
+                        <div class="visual-box">
+                            <img src="images/real_user_profile_2.jpg" alt="Real User Profile 2"
+                                style="width: 100%; height: auto;">
+                        </div>
                     </div>
-                    <div class="visual-box">
-                        <img src="images/real_user_profile_2.jpg" alt="Real User Profile 2"
-                            style="width: 100%; height: auto;">
-                    </div>
-                </div>
 
-                <!-- Interpretative text -->
-                <p style="font-size: 1.05rem; line-height: 1.5;">
-                    These posts demonstrate that Real Users retweeted or engaged with IRA-generated content
-                    unintentionally. Their activity underscores a central challenge in identifying coordinated
-                    disinformation: once messages enter the broader ecosystem, distinguishing between synthetic and
-                    organic spread becomes extremely difficult. The continued activity of these users highlights how the
-                    operation blended seamlessly into the platform’s everyday interactions.
-                </p>
-            </section>
+                    <!-- Interpretative text -->
+                    <p style="font-size: 1.05rem; line-height: 1.5;">
+                        These posts demonstrate that Real Users retweeted or engaged with IRA-generated content
+                        unintentionally. Their activity underscores a central challenge in identifying coordinated
+                        disinformation: once messages enter the broader ecosystem, distinguishing between synthetic and
+                        organic spread becomes extremely difficult. The continued activity of these users highlights how
+                        the
+                        operation blended seamlessly into the platform’s everyday interactions.
+                    </p>
+                </section>
 
     </div>
     <script src="script.js"></script>
