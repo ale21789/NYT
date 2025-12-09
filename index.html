@@ -71,8 +71,9 @@
             </div>
             <h1 class="masthead">The New York Times</h1>
             <nav class="nav-menu">
-                <span>World</span>
-                <span>U.S.</span>
+                <span><a href="index.html"
+                        style="text-decoration: none; color: inherit; font-weight: bold;">World</a></span>
+                <span><a href="us.html" style="text-decoration: none; color: inherit;">U.S.</a></span>
                 <span>Politics</span>
                 <span>N.Y.</span>
                 <span>Business</span>
@@ -278,190 +279,178 @@
             </div>
             <div class="visual-box">
                 <div class="visual-title">Account Type Distribution Over Time</div>
-                <img src="images/plot_cell_13_9.png" alt="Account Type Distribution" style="width: 100%; height: auto;">
+                <p>A deep dive into the polarization machine: How Left and Right Trolls tore the fabric of discourse.
+                </p>
             </div>
-            <div class="visual-box" style="margin-top: 40px;">
-                <div class="visual-title">Normalized Distribution (Strategy Shift)</div>
-                <img src="images/plot_cell_14_10.png" alt="Normalized Distribution" style="width: 100%; height: auto;">
-                <span class="caption">The strategic pivot: Note the rising dominance of partisan troll accounts in
-                    later
-                    years.</span>
-            </div>
-        </section>
 
-        <!-- PART II: THE IDEOLOGICAL DIVIDE -->
-        <div class="part-divider">
-            <h2>PART II: THE IDEOLOGICAL DIVIDE (ENGLISH SUBSET)</h2>
-            <p>A deep dive into the polarization machine: How Left and Right Trolls tore the fabric of discourse.
-            </p>
-        </div>
+            <!-- 1. Hashtags -->
+            <section style="margin-bottom: 60px;">
+                <h3 class="section-title">Echo Chambers</h3>
+                <div class="grid-2">
+                    <div class="editorial-text">
+                        <p>The hashtag analysis reveals two distinct realities. Right Trolls focused on patriotism,
+                            guns,
+                            and Trump (#MAGA, #2A), while Left Trolls co-opted social justice movements
+                            (#BlackLivesMatter,
+                            #Resist). The goal was not to debate, but to amplify the extremes.</p>
+                    </div>
+                    <div class="visual-box">
+                        <div class="visual-title">Hashtags: Left vs Right</div>
+                        <img src="images/plot_cell_20_12.png" alt="Hashtags Left vs Right"
+                            style="width: 100%; height: auto;">
+                    </div>
+                </div>
+            </section>
 
-        <!-- 1. Hashtags -->
-        <section style="margin-bottom: 60px;">
-            <h3 class="section-title">Echo Chambers</h3>
-            <div class="grid-2">
+            <!-- 2. Word Distribution -->
+            <section style="margin-bottom: 60px;">
+                <h3 class="section-title">Weaponized Vocabulary</h3>
+                <div class="visual-box">
+                    <div class="visual-title">Top Words by Ideology</div>
+                    <img src="images/plot_cell_21_13.png" alt="Top Words by Ideology"
+                        style="width: 100%; height: auto;">
+                    <span class="caption">A linguistic fingerprint of polarization.</span>
+                </div>
+            </section>
+
+            <!-- 3. Monthly Tweet Count -->
+            <section style="margin-bottom: 60px;">
+                <h3 class="section-title">Monthly Tweet Volume</h3>
+                <div class="visual-box">
+                    <div class="visual-title">Monthly Tweet Volume: Left vs Right</div>
+                    <iframe src="graphs/graph_cell_16_1.html" width="100%" height="600px" frameborder="0"></iframe>
+                </div>
+            </section>
+
+            <!-- 4. Daily Tweet Count -->
+            <section style="margin-bottom: 60px;">
+                <h3 class="section-title">Daily Tweet Volume</h3>
+                <div class="visual-box">
+                    <div class="visual-title">Daily Tweet Volume: Left vs Right</div>
+                    <iframe src="graphs/graph_cell_17_2.html" width="100%" height="600px" frameborder="0"></iframe>
+                </div>
+            </section>
+
+            <!-- 5. Word Frequency Peaks -->
+            <section style="margin-bottom: 60px;">
+                <h3 class="section-title">The Language of Division</h3>
                 <div class="editorial-text">
-                    <p>The hashtag analysis reveals two distinct realities. Right Trolls focused on patriotism,
-                        guns,
-                        and Trump (#MAGA, #2A), while Left Trolls co-opted social justice movements
-                        (#BlackLivesMatter,
-                        #Resist). The goal was not to debate, but to amplify the extremes.</p>
+                    <p>By isolating the English-language tweets from "Left" and "Right" trolls during peak activity, we
+                        can
+                        see the mirror-image narratives constructed to enrage both sides of the political spectrum.</p>
                 </div>
                 <div class="visual-box">
-                    <div class="visual-title">Hashtags: Left vs Right</div>
-                    <img src="images/plot_cell_20_12.png" alt="Hashtags Left vs Right"
-                        style="width: 100%; height: auto;">
+                    <div class="visual-title">Word Frequency During Peaks</div>
+                    <img src="images/plot_cell_18_11.png" alt="Word Frequency Peaks" style="width: 100%; height: auto;">
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 2. Word Distribution -->
-        <section style="margin-bottom: 60px;">
-            <h3 class="section-title">Weaponized Vocabulary</h3>
-            <div class="visual-box">
-                <div class="visual-title">Top Words by Ideology</div>
-                <img src="images/plot_cell_21_13.png" alt="Top Words by Ideology" style="width: 100%; height: auto;">
-                <span class="caption">A linguistic fingerprint of polarization.</span>
-            </div>
-        </section>
+            <!-- 6. Conclusion Table -->
+            <section style="margin-bottom: 60px;">
+                <h3 class="section-title">Conclusion: The Anatomy of a Spike</h3>
+                <table class="conclusion-table">
+                    <thead>
+                        <tr>
+                            <th class="category-col">Category</th>
+                            <th class="right-troll-col">Right Troll Peak</th>
+                            <th class="left-troll-col">Left Troll Peak</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Timing</td>
+                            <td>Post-Election (August 11–18, 2017)</td>
+                            <td>Pre-Election (October 6, 2016)</td>
+                        </tr>
+                        <tr>
+                            <td>Most Used Words</td>
+                            <td>"Trump," "Charlottesville," "Antifa," "maga," "violence," "white"</td>
+                            <td>"black," "trump," "music," "white," "listen," "police," "album"</td>
+                        </tr>
+                        <tr>
+                            <td>Primary Goal</td>
+                            <td>Destabilization and Polarization (Incite Hate)</td>
+                            <td>Distraction and Demobilization (Obscure Russian Meddling)</td>
+                        </tr>
+                        <tr>
+                            <td>Strategic Rationale</td>
+                            <td>The strategy shifted from aiding one candidate to wounding the entire country. The
+                                trolls
+                                exploited the real-world crisis in Charlottesville to amplify racial and political
+                                conflict
+                                ("Charlottesville," "Antifa," "violence") and reinforce tribal political identity
+                                ("maga,"
+                                "Trump"). The massive spike in activity was intended to drive the maximum possible
+                                division
+                                post-election.</td>
+                            <td>The peak coincided with the US government's official statements regarding Russian
+                                involvement in the election hacks and the WikiLeaks release of stolen DNC/Podesta
+                                emails.
+                                The trolls' messaging had two aims: 1. Flood the environment with apolitical content
+                                ("music," "listen," "album") to distract left-leaning voters and drown out coverage of
+                                the
+                                hacking's origins. 2. Inflame social tensions ("black," "police") to discourage voter
+                                participation by fostering distrust and disaffection with the political process.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <!-- 3. Monthly Tweet Count -->
-        <section style="margin-bottom: 60px;">
-            <h3 class="section-title">Monthly Tweet Volume</h3>
-            <div class="visual-box">
-                <div class="visual-title">Monthly Tweet Volume: Left vs Right</div>
-                <iframe src="graphs/graph_cell_16_1.html" width="100%" height="600px" frameborder="0"></iframe>
-            </div>
-        </section>
+            <!-- SECTION 7: Network Analysis -->
+            <section id="section-7" class="network-hero">
+                <h2 style="font-size: 3rem; margin-bottom: 30px; border-bottom: 1px solid #444; padding-bottom: 10px;">
+                    Inside the Machinery: Network Structure of the Troll Farm</h2>
 
-        <!-- 4. Daily Tweet Count -->
-        <section style="margin-bottom: 60px;">
-            <h3 class="section-title">Daily Tweet Volume</h3>
-            <div class="visual-box">
-                <div class="visual-title">Daily Tweet Volume: Left vs Right</div>
-                <iframe src="graphs/graph_cell_17_2.html" width="100%" height="600px" frameborder="0"></iframe>
-            </div>
-        </section>
-
-        <!-- 5. Word Frequency Peaks -->
-        <section style="margin-bottom: 60px;">
-            <h3 class="section-title">The Language of Division</h3>
-            <div class="editorial-text">
-                <p>By isolating the English-language tweets from "Left" and "Right" trolls during peak activity, we
-                    can
-                    see the mirror-image narratives constructed to enrage both sides of the political spectrum.</p>
-            </div>
-            <div class="visual-box">
-                <div class="visual-title">Word Frequency During Peaks</div>
-                <img src="images/plot_cell_18_11.png" alt="Word Frequency Peaks" style="width: 100%; height: auto;">
-            </div>
-        </section>
-
-        <!-- 6. Conclusion Table -->
-        <section style="margin-bottom: 60px;">
-            <h3 class="section-title">Conclusion: The Anatomy of a Spike</h3>
-            <table class="conclusion-table">
-                <thead>
-                    <tr>
-                        <th class="category-col">Category</th>
-                        <th class="right-troll-col">Right Troll Peak</th>
-                        <th class="left-troll-col">Left Troll Peak</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Timing</td>
-                        <td>Post-Election (August 11–18, 2017)</td>
-                        <td>Pre-Election (October 6, 2016)</td>
-                    </tr>
-                    <tr>
-                        <td>Most Used Words</td>
-                        <td>"Trump," "Charlottesville," "Antifa," "maga," "violence," "white"</td>
-                        <td>"black," "trump," "music," "white," "listen," "police," "album"</td>
-                    </tr>
-                    <tr>
-                        <td>Primary Goal</td>
-                        <td>Destabilization and Polarization (Incite Hate)</td>
-                        <td>Distraction and Demobilization (Obscure Russian Meddling)</td>
-                    </tr>
-                    <tr>
-                        <td>Strategic Rationale</td>
-                        <td>The strategy shifted from aiding one candidate to wounding the entire country. The
-                            trolls
-                            exploited the real-world crisis in Charlottesville to amplify racial and political
-                            conflict
-                            ("Charlottesville," "Antifa," "violence") and reinforce tribal political identity
-                            ("maga,"
-                            "Trump"). The massive spike in activity was intended to drive the maximum possible
-                            division
-                            post-election.</td>
-                        <td>The peak coincided with the US government's official statements regarding Russian
-                            involvement in the election hacks and the WikiLeaks release of stolen DNC/Podesta
-                            emails.
-                            The trolls' messaging had two aims: 1. Flood the environment with apolitical content
-                            ("music," "listen," "album") to distract left-leaning voters and drown out coverage of
-                            the
-                            hacking's origins. 2. Inflame social tensions ("black," "police") to discourage voter
-                            participation by fostering distrust and disaffection with the political process.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- SECTION 7: Network Analysis -->
-        <section id="section-7" class="network-hero">
-            <h2 style="font-size: 3rem; margin-bottom: 30px; border-bottom: 1px solid #444; padding-bottom: 10px;">
-                Inside the Machinery: Network Structure of the Troll Farm</h2>
-
-            <!-- HTML Graphs -->
-            <div class="visual-box" style="margin-bottom: 40px;">
-                <div class="visual-title">Bridge Categories Network</div>
-                <iframe src="graphs/bridge_categories_network.html" width="100%" height="400px"
-                    frameborder="0"></iframe>
-            </div>
-            <div class="visual-box" style="margin-bottom: 40px;">
-                <div class="visual-title">Community Network LCC</div>
-                <iframe src="graphs/community_network_lcc.html" width="100%" height="400px" frameborder="0"></iframe>
-            </div>
-            <div class="visual-box" style="margin-bottom: 40px;">
-                <div class="visual-title">Retweet Network LCC</div>
-                <iframe src="graphs/retweet_network_lcc.html" width="100%" height="400px" frameborder="0"></iframe>
-            </div>
-
-            <!-- Row 2: Images -->
-            <div class="grid-3" style="margin-top: 40px;">
-                <div class="visual-box">
-                    <div class="visual-title">Network Visualization 1</div>
-                    <img src="images/network_image_1.jpeg" alt="Network Visualization 1"
-                        style="width: 100%; height: auto;">
+                <!-- HTML Graphs -->
+                <div class="visual-box" style="margin-bottom: 40px;">
+                    <div class="visual-title">Bridge Categories Network</div>
+                    <iframe src="graphs/bridge_categories_network.html" width="100%" height="400px"
+                        frameborder="0"></iframe>
                 </div>
-                <div class="visual-box">
-                    <div class="visual-title">Network Visualization 2</div>
-                    <img src="images/network_image_2.jpeg" alt="Network Visualization 2"
-                        style="width: 100%; height: auto;">
+                <div class="visual-box" style="margin-bottom: 40px;">
+                    <div class="visual-title">Community Network LCC</div>
+                    <iframe src="graphs/community_network_lcc.html" width="100%" height="400px"
+                        frameborder="0"></iframe>
                 </div>
-                <div class="visual-box">
-                    <div class="visual-title">Network Visualization 3</div>
-                    <img src="images/network_image_3.jpeg" alt="Network Visualization 3"
-                        style="width: 100%; height: auto;">
+                <div class="visual-box" style="margin-bottom: 40px;">
+                    <div class="visual-title">Retweet Network LCC</div>
+                    <iframe src="graphs/retweet_network_lcc.html" width="100%" height="400px" frameborder="0"></iframe>
                 </div>
-            </div>
-        </section>
 
-        <!-- USER REQUESTED SECTION: Still Active Profiles -->
-        <section style="margin-bottom: 60px;">
-            <h3 class="section-title">Still Active Profiles of Real_Users on X</h3>
-            <div class="grid-2">
-                <div class="visual-box">
-                    <img src="images/real_user_profile_1.jpg" alt="Real User Profile 1"
-                        style="width: 100%; height: auto;">
+                <!-- Row 2: Images -->
+                <div class="grid-3" style="margin-top: 40px;">
+                    <div class="visual-box">
+                        <div class="visual-title">Network Visualization 1</div>
+                        <img src="images/network_image_1.jpeg" alt="Network Visualization 1"
+                            style="width: 100%; height: auto;">
+                    </div>
+                    <div class="visual-box">
+                        <div class="visual-title">Network Visualization 2</div>
+                        <img src="images/network_image_2.jpeg" alt="Network Visualization 2"
+                            style="width: 100%; height: auto;">
+                    </div>
+                    <div class="visual-box">
+                        <div class="visual-title">Network Visualization 3</div>
+                        <img src="images/network_image_3.jpeg" alt="Network Visualization 3"
+                            style="width: 100%; height: auto;">
+                    </div>
                 </div>
-                <div class="visual-box">
-                    <img src="images/real_user_profile_2.jpg" alt="Real User Profile 2"
-                        style="width: 100%; height: auto;">
+            </section>
+
+            <!-- USER REQUESTED SECTION: Still Active Profiles -->
+            <section style="margin-bottom: 60px;">
+                <h3 class="section-title">Still Active Profiles of Real_Users on X</h3>
+                <div class="grid-2">
+                    <div class="visual-box">
+                        <img src="images/real_user_profile_1.jpg" alt="Real User Profile 1"
+                            style="width: 100%; height: auto;">
+                    </div>
+                    <div class="visual-box">
+                        <img src="images/real_user_profile_2.jpg" alt="Real User Profile 2"
+                            style="width: 100%; height: auto;">
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
     </div>
     <script src="script.js"></script>
