@@ -139,7 +139,6 @@
 
                 <p style="margin-bottom: 20px;">Because the whole state forms one large connected structure, the dataset
                     is ideal for studying sparsity, local redundancy and motifs in real-world infrastructure.</p>
-
                 <div class="source-citation"
                     style="font-size: 0.9rem; color: #666; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 20px;">
                     <strong>Source:</strong><br>
@@ -151,7 +150,6 @@
             </div>
         </section>
 
-        <!-- NETWORK STRUCTURE SNAPSHOT SECTION -->
         <!-- NETWORK STRUCTURE IN A SNAPSHOT SECTION -->
         <section style="margin-bottom: 40px;">
             <h3
@@ -163,42 +161,44 @@
                 </p>
 
                 <table
-                    style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif; font-size: 0.95rem; margin-bottom: 25px; border-top: 4px double #000; border-bottom: 1px solid #ccc;">
+                    style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif; font-size: 0.95rem; margin-bottom: 25px; border-top: 4px double #fff; border-bottom: 1px solid #444; background-color: #121212; color: #e0e0e0;">
                     <thead>
-                        <tr style="border-bottom: 1px solid #000;">
+                        <tr style="border-bottom: 1px solid #444;">
                             <th
-                                style="text-align: left; padding: 10px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem;">
+                                style="text-align: left; padding: 10px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; color: #fff;">
                                 Metric</th>
                             <th
-                                style="text-align: right; padding: 10px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem;">
+                                style="text-align: right; padding: 10px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; color: #fff;">
                                 Value</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 10px; color: #333;">Intersections (nodes)</td>
-                            <td style="text-align: right; padding: 10px; font-weight: bold;">1,965,206</td>
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 10px; color: #ccc;">Intersections (nodes)</td>
+                            <td style="text-align: right; padding: 10px; font-weight: bold; color: #fff;">1,965,206</td>
                         </tr>
-                        <tr style="border-bottom: 1px solid #eee; background-color: #f9f9f9;">
-                            <td style="padding: 10px; color: #333;">Road segments (edges)</td>
-                            <td style="text-align: right; padding: 10px; font-weight: bold;">2,766,607</td>
+                        <tr style="border-bottom: 1px solid #333; background-color: #1a1a1a;">
+                            <td style="padding: 10px; color: #ccc;">Road segments (edges)</td>
+                            <td style="text-align: right; padding: 10px; font-weight: bold; color: #fff;">2,766,607</td>
                         </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 10px; color: #333;">Largest connected component</td>
-                            <td style="text-align: right; padding: 10px; font-weight: bold;">1,957,027 nodes (≈99.6%)
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 10px; color: #ccc;">Largest connected component</td>
+                            <td style="text-align: right; padding: 10px; font-weight: bold; color: #fff;">1,957,027
+                                nodes (≈99.6%)
                             </td>
                         </tr>
-                        <tr style="border-bottom: 1px solid #eee; background-color: #f9f9f9;">
-                            <td style="padding: 10px; color: #333;">Clustering coefficient</td>
-                            <td style="text-align: right; padding: 10px; font-weight: bold;">0.0603</td>
+                        <tr style="border-bottom: 1px solid #333; background-color: #1a1a1a;">
+                            <td style="padding: 10px; color: #ccc;">Clustering coefficient</td>
+                            <td style="text-align: right; padding: 10px; font-weight: bold; color: #fff;">0.0603</td>
                         </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 10px; color: #333;">Triangles detected</td>
-                            <td style="text-align: right; padding: 10px; font-weight: bold;">120,676</td>
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 10px; color: #ccc;">Triangles detected</td>
+                            <td style="text-align: right; padding: 10px; font-weight: bold; color: #fff;">120,676</td>
                         </tr>
-                        <tr style="background-color: #f9f9f9;">
-                            <td style="padding: 10px; color: #333;">Total wedges</td>
-                            <td style="text-align: right; padding: 10px; font-weight: bold;">~5,995,090</td>
+                        <tr style="background-color: #1a1a1a;">
+                            <td style="padding: 10px; color: #ccc;">Total wedges</td>
+                            <td style="text-align: right; padding: 10px; font-weight: bold; color: #fff;">~5,995,090
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -225,77 +225,152 @@
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px;">
                 <!-- VISUALIZATION 1 -->
-                <div class="visual-box">
-                    <div class="visual-title">Degree Distribution & Connectivity</div>
-                    <iframe src="motif/roadnet_subgraph_force.html"
-                        style="width:100%; height:800px; border:none;"></iframe>
+                <div class="visual-box"
+                    style="text-align: left; padding: 25px; background-color: #f9f9f9; border: 1px solid #e0e0e0;">
+                    <div
+                        style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; color: #000;">
+                        A Look Inside a Local Intersection: The Network Beneath the Map
+                    </div>
+                    <div
+                        style="font-variant: small-caps; font-family: 'Georgia', serif; font-size: 0.8rem; letter-spacing: 0.5px; color: #666; margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+                        A force directed view of a two hop neighborhood around a key California intersection.
+                    </div>
 
-                    <p style="font-size: 0.95rem; margin-top: 15px; color: #e2e2e2; text-align: left;">
-                        Most intersections connect to only two others.
-                        This creates long, linear chains that stretch across the state and reveal a network built under
-                        physical constraints rather than free growth.
-                    </p>
-                    <p style="font-size: 0.9rem; margin-top: 10px; font-weight: bold; color: #fff; text-align: left;">
-                        Takeaway: California’s road system is structurally sparse, with few highly connected
-                        intersections.
+                    <iframe src="motif/roadnet_subgraph_force.html"
+                        style="width:100%; height:400px; border:none; margin-bottom: 15px;"></iframe>
+
+                    <p
+                        style="font-family: 'Georgia', serif; font-size: 0.9rem; font-style: italic; color: #444; line-height: 1.5; margin: 0;">
+                        This diagram shows the local structure around a high degree intersection. Each dot is a road
+                        node, each line a connection. The highlighted cluster reveals the rare presence of a triangle
+                        motif, a small pocket of redundancy in an otherwise linear road system.
                     </p>
                 </div>
 
                 <!-- VISUALIZATION 2 -->
-                <div class="visual-box">
-                    <div class="visual-title">Triangle Motifs: Local Redundancy</div>
-                    <iframe src="motif/roadnet_subgraph_triangles.html" width="100%" height="600px" frameborder="0"
-                        style="background: white;"></iframe>
+                <div class="visual-box"
+                    style="text-align: left; padding: 25px; background-color: #f9f9f9; border: 1px solid #e0e0e0;">
+                    <div
+                        style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; color: #000;">
+                        Where Redundancy Appears: Triangle Motifs in California’s Roads
+                    </div>
+                    <div
+                        style="font-variant: small-caps; font-family: 'Georgia', serif; font-size: 0.8rem; letter-spacing: 0.5px; color: #666; margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+                        A closer look at the few places where the network forms true cycles.
+                    </div>
 
-                    <p style="font-size: 0.95rem; margin-top: 15px; color: #e2e2e2; text-align: left;">
-                        Triangles are rare in road networks because physical constraints prevent many alternative paths.
-                        Where they do appear, they signal redundancy — a small pocket of resilience.
+                    <iframe src="motif/roadnet_subgraph_triangles.html" width="100%" height="400px" frameborder="0"
+                        style="background: white; margin-bottom: 15px;"></iframe>
+
+                    <p
+                        style="font-family: 'Georgia', serif; font-size: 0.9rem; font-style: italic; color: #444; line-height: 1.5; margin: 0;">
+                        Nodes and edges forming triangle motifs are highlighted in orange and red. These tiny three node
+                        cycles show where the road network offers a backup route. Their scarcity underscores how little
+                        local redundancy exists across California’s road system.
                     </p>
-                    <p style="font-size: 0.9rem; margin-top: 10px; font-weight: bold; color: #fff; text-align: left;">
-                        Takeaway: Triangle motifs highlight the only places where the network offers true backup routes.
+                </div>
+
+                <!-- VISUALIZATION 3 -->
+                <div class="visual-box"
+                    style="text-align: left; padding: 25px; background-color: #f9f9f9; border: 1px solid #e0e0e0;">
+                    <div
+                        style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; color: #000;">
+                        The Shape of the Core Network, Reimagined in Space
+                    </div>
+                    <div
+                        style="font-variant: small-caps; font-family: 'Georgia', serif; font-size: 0.8rem; letter-spacing: 0.5px; color: #666; margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+                        A synthetic spatial projection of the most connected portion of the network.
+                    </div>
+
+                    <iframe src="motif/roadnet_subgraph_basic_map.html" width="100%" height="400px" frameborder="0"
+                        style="background: white; margin-bottom: 15px;"></iframe>
+
+                    <p
+                        style="font-family: 'Georgia', serif; font-size: 0.9rem; font-style: italic; color: #444; line-height: 1.5; margin: 0;">
+                        This map places a force directed layout inside California’s geographic boundaries. The positions
+                        are not real: they reveal the structure, not the location, of the most connected hubs. The dense
+                        core and long radial chains reflect how traffic flows through a few critical intersections.
+                    </p>
+                </div>
+
+                <!-- VISUALIZATION 4 -->
+                <div class="visual-box"
+                    style="text-align: left; padding: 25px; background-color: #f9f9f9; border: 1px solid #e0e0e0;">
+                    <div
+                        style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; color: #000;">
+                        California’s Road Network, As It Exists on the Ground
+                    </div>
+                    <div
+                        style="font-variant: small-caps; font-family: 'Georgia', serif; font-size: 0.8rem; letter-spacing: 0.5px; color: #666; margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+                        A georeferenced view built from real OpenStreetMap data.
+                    </div>
+
+                    <iframe src="motif/osm_real_network.html" width="100%" height="400px" frameborder="0"
+                        style="background: white; margin-bottom: 15px;"></iframe>
+
+                    <p
+                        style="font-family: 'Georgia', serif; font-size: 0.9rem; font-style: italic; color: #444; line-height: 1.5; margin: 0;">
+                        Unlike the synthetic layouts above, this map shows real intersections and real street geometries
+                        across Los Angeles. The dense grid, major arterial corridors, and irregular suburban patterns
+                        validate the topological properties observed in the SNAP dataset.
                     </p>
                 </div>
             </div>
-
-            <!-- VISUALIZATION 3 -->
-            <div class="visual-box" style="margin-bottom: 20px;">
-                <div class="visual-title">A Close-Up of a Critical Intersection</div>
-                <iframe src="motif/roadnet_subgraph_basic_map.html" width="100%" height="600px" frameborder="0"
-                    style="background: white;"></iframe>
-
-                <p style="font-size: 0.95rem; margin-top: 15px; color: #e2e2e2; text-align: left;">
-                    Zooming into a high-degree node shows short chains radiating outward, few local cycles, and a quick
-                    drop in density after two hops.
-                </p>
-                <p style="font-size: 0.9rem; margin-top: 10px; font-weight: bold; color: #fff; text-align: left;">
-                    Takeaway: Even major intersections sit within neighborhoods that offer very limited alternative
-                    routing.
-                </p>
-            </div>
-
-            <!-- VISUALIZATION 4 -->
-            <div class="visual-box" style="margin-bottom: 20px;">
-                <div class="visual-title">OSM Real Network</div>
-                <iframe src="motif/osm_real_network.html" width="100%" height="600px" frameborder="0"
-                    style="background: white;"></iframe>
-
-                <p style="font-size: 0.95rem; margin-top: 15px; color: #e2e2e2; text-align: left;">
-                    [Placeholder for description: Explain what this real-world OSM network visualization shows.]
-                </p>
-                <p style="font-size: 0.9rem; margin-top: 10px; font-weight: bold; color: #fff; text-align: left;">
-                    Takeaway: [Placeholder for takeaway]
-                </p>
-            </div>
         </section>
 
-        <!-- CONCLUSION SECTION -->
-        <section style="margin-bottom: 60px;">
-            <h3 class="section-title">Conclusion</h3>
-            <div class="editorial-text">
-                <p>Graph motifs reveal the hidden structure of California’s road network.</p>
-                <p>A system shaped by geography and constraints, with sparse connectivity and only a few points of
-                    redundancy that hold large regions together.</p>
+        <!-- EXECUTIVE SUMMARY SECTION -->
+        <section style="margin-bottom: 60px; border-top: 1px solid #000; padding-top: 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 30px;">
+                <h3
+                    style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #000; margin: 0;">
+                    EXECUTIVE SUMMARY
+                </h3>
+                <span
+                    style="font-family: 'Arial', sans-serif; font-size: 0.65rem; text-transform: uppercase; color: #666; letter-spacing: 0.5px;">ANALYSIS
+                    & CONCLUSIONS</span>
             </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
+                <!-- Left Text Column -->
+                <div style="font-family: 'Georgia', serif; font-size: 1.05rem; color: #121212; line-height: 1.6;">
+                    <p style="margin-bottom: 20px;">
+                        <span
+                            style="float: left; font-size: 4.6rem; line-height: 0.8; font-weight: 700; font-family: 'Playfair Display', serif; margin-right: 10px; margin-top: -4px;">C</span><span
+                            style="font-variant: small-caps; letter-spacing: 0.5px; font-weight: bold;">alifornia’s road
+                            network</span> looks immense and complex, yet its underlying structure is surprisingly
+                        simple, and surprisingly fragile. Data from the roadNet-CA graph shows that nearly every
+                        intersection in the state belongs to one vast, continuous system. Movement flows across a single
+                        web stretching from the Bay Area to the desert, with almost no isolated clusters and very little
+                        built-in redundancy.
+                    </p>
+
+                    <p style="margin-bottom: 20px;">Most intersections connect to only a few others, forming long linear
+                        corridors rather than dense local grids. Loops are rare. Triangles, the small repeating patterns
+                        that signal alternative paths, appear only in scattered clusters, mostly in major cities. Their
+                        scarcity reveals a network engineered for reach, not resilience.</p>
+
+                    <p style="margin-bottom: 20px;">The consequences surface not only in the data but also on the
+                        ground. The Thanksgiving traffic captured in this image visually demonstrates the network's
+                        fragility. When the main arteries are clogged, the lack of parallel redundancy means there is
+                        nowhere for the excess volume to go, turning a simple surge in demand into a system-wide stall.
+                    </p>
+
+                    <p style="margin-bottom: 20px;">What emerges is a network that is highly connected yet locally
+                        sparse, efficient yet brittle. Beneath the map lies a simple truth revealed by the motifs:
+                        California’s roads are built to function when everything works, not when something fails.</p>
+                </div>
+
+                <!-- Right Image Column -->
+                <div style="display: flex; flex-direction: column;">
+                    <img src="la_traffic.png" alt="Los Angeles Traffic at Night"
+                        style="width: 100%; height: auto; margin-bottom: 12px;">
+                    <span
+                        style="font-family: 'Georgia', serif; font-size: 0.8rem; color: #666; font-style: italic; line-height: 1.3;">Thanksgiving
+                        traffic in Los Angeles visually demonstrates the network's lack of redundancy: a single glowing
+                        artery with no viable alternatives.</span>
+                </div>
+            </div>
+
         </section>
 
     </div>
