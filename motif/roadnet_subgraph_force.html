@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roadnet Subgraph – Force Layout</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #eee;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    #viz {
+      width: 100vw;
+      height: 100vh;
+      background: #111;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="viz"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <script>
+    const graph = {"nodes": [{"id": "562813"}, {"id": "562824"}, {"id": "562770"}, {"id": "562668"}, {"id": "562667"}, {"id": "562818"}, {"id": "562827"}, {"id": "562823"}, {"id": "562745"}, {"id": "562826"}, {"id": "562740"}, {"id": "562825"}, {"id": "562738"}, {"id": "562771"}, {"id": "562744"}, {"id": "562819"}, {"id": "562817"}, {"id": "562833"}, {"id": "562810"}, {"id": "562769"}, {"id": "562776"}, {"id": "562822"}, {"id": "562828"}, {"id": "562821"}, {"id": "562840"}, {"id": "562829"}, {"id": "562834"}, {"id": "562852"}], "links": [{"source": "562817", "target": "562818"}, {"source": "562810", "target": "562818"}, {"source": "562818", "target": "562825"}, {"source": "562771", "target": "562818"}, {"source": "562818", "target": "562833"}, {"source": "562769", "target": "562818"}, {"source": "562818", "target": "562821"}, {"source": "562818", "target": "562824"}, {"source": "562770", "target": "562818"}, {"source": "562818", "target": "562826"}, {"source": "562818", "target": "562827"}, {"source": "562818", "target": "562823"}, {"source": "562827", "target": "562852"}, {"source": "562817", "target": "562823"}, {"source": "562770", "target": "562776"}, {"source": "562827", "target": "562829"}, {"source": "562823", "target": "562829"}, {"source": "562833", "target": "562834"}, {"source": "562770", "target": "562817"}, {"source": "562769", "target": "562771"}, {"source": "562826", "target": "562834"}, {"source": "562817", "target": "562822"}, {"source": "562825", "target": "562826"}, {"source": "562825", "target": "562828"}, {"source": "562817", "target": "562840"}, {"source": "562769", "target": "562770"}, {"source": "562824", "target": "562833"}, {"source": "562827", "target": "562828"}, {"source": "562744", "target": "562770"}, {"source": "562738", "target": "562821"}, {"source": "562667", "target": "562824"}, {"source": "562668", "target": "562824"}, {"source": "562738", "target": "562810"}, {"source": "562813", "target": "562833"}, {"source": "562745", "target": "562810"}, {"source": "562819", "target": "562821"}, {"source": "562740", "target": "562810"}, {"source": "562745", "target": "562771"}]};
+
+    const div = document.getElementById("viz");
+    const width = div.clientWidth;
+    const height = div.clientHeight;
+
+    // SVG
+    const svg = d3.select("#viz")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    // Simulation
+    const sim = d3.forceSimulation(graph.nodes)
+      .force("link", d3.forceLink(graph.links).id(d => d.id).distance(40))
+      .force("charge", d3.forceManyBody().strength(-50))
+      .force("center", d3.forceCenter(width / 2, height / 2));
+
+    // Draw links
+    const link = svg.append("g")
+      .attr("stroke", "#666")
+      .selectAll("line")
+      .data(graph.links)
+      .enter()
+      .append("line")
+      .attr("stroke-width", 1);
+
+    // Draw nodes
+    const node = svg.append("g")
+      .selectAll("circle")
+      .data(graph.nodes)
+      .enter()
+      .append("circle")
+      .attr("r", 4)
+      .attr("fill", "#4FC3F7");
+
+    // Update positions
+    sim.on("tick", () => {
+      link
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      node
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y);
+    });
+  </script>
+</body>
+</html>

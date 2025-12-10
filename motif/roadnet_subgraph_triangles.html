@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roadnet Subgraph – Triangles Highlighted</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f5f5f5;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    #viz {
+      width: 100vw;
+      height: 100vh;
+      background: #f5f5f5;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="viz"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <script>
+    const graph = {"nodes": [{"id": "351058", "inTriangle": true}, {"id": "342252", "inTriangle": false}, {"id": "350979", "inTriangle": false}, {"id": "350980", "inTriangle": false}, {"id": "342652", "inTriangle": false}, {"id": "351056", "inTriangle": true}, {"id": "342253", "inTriangle": true}, {"id": "342627", "inTriangle": false}, {"id": "351057", "inTriangle": false}, {"id": "351059", "inTriangle": false}, {"id": "351094", "inTriangle": false}, {"id": "351128", "inTriangle": false}], "links": [{"source": "351056", "target": "351058", "inTriangle": true}, {"source": "342652", "target": "351056", "inTriangle": false}, {"source": "351056", "target": "351057", "inTriangle": false}, {"source": "342253", "target": "351056", "inTriangle": true}, {"source": "342253", "target": "351058", "inTriangle": true}, {"source": "342253", "target": "351094", "inTriangle": false}, {"source": "351058", "target": "351059", "inTriangle": false}, {"source": "342652", "target": "351128", "inTriangle": false}, {"source": "342252", "target": "342253", "inTriangle": false}, {"source": "342252", "target": "342652", "inTriangle": false}, {"source": "350979", "target": "351057", "inTriangle": false}, {"source": "342627", "target": "342652", "inTriangle": false}, {"source": "350980", "target": "351057", "inTriangle": false}]};
+
+    const div = document.getElementById("viz");
+    const width = div.clientWidth;
+    const height = div.clientHeight;
+
+    // SVG
+    const svg = d3.select("#viz")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    // Force simulation
+    const sim = d3.forceSimulation(graph.nodes)
+      .force("link", d3.forceLink(graph.links).id(d => d.id).distance(40))
+      .force("charge", d3.forceManyBody().strength(-60))
+      .force("center", d3.forceCenter(width / 2, height / 2));
+
+    // Links: red if part of a triangle, grey otherwise
+    const link = svg.append("g")
+      .selectAll("line")
+      .data(graph.links)
+      .enter()
+      .append("line")
+      .attr("stroke-width", 1.2)
+      .attr("stroke", d => d.inTriangle ? "#e53935" : "#b0bec5")
+      .attr("stroke-opacity", d => d.inTriangle ? 0.9 : 0.5);
+
+    // Nodes: orange, but brighter if in a triangle
+    const node = svg.append("g")
+      .selectAll("circle")
+      .data(graph.nodes)
+      .enter()
+      .append("circle")
+      .attr("r", 4)
+      .attr("fill", d => d.inTriangle ? "#ffb300" : "#6d4c41");
+
+    // Tick updates
+    sim.on("tick", () => {
+      link
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      node
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y);
+    });
+  </script>
+</body>
+</html>
